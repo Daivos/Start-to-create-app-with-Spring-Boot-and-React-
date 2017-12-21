@@ -22,7 +22,9 @@ public class InstitucijosServisas {
 					InstitucijaKlientui ik = new InstitucijaKlientui();
 					ik.setId(institucija.getId());
 					ik.setInstPavadinimas(institucija.getInstPavadinimas());
-					
+					ik.setKategorija(institucija.getKategorija());
+					ik.setMiestas(institucija.getMiestas());
+					ik.setNuotrauka(institucija.getNuotrauka());
 					return ik;
 				})
 				.collect(Collectors.toList());
@@ -35,6 +37,9 @@ public class InstitucijosServisas {
 		Institucija in = new Institucija();
 		in.setId(institucijaKlientui.getId());
 		in.setInstPavadinimas(institucijaKlientui.getInstPavadinimas());
+		in.setKategorija(institucijaKlientui.getKategorija());
+		in.setMiestas(institucijaKlientui.getMiestas());
+		in.setNuotrauka(institucijaKlientui.getNuotrauka());
 		institucijaRepository.save(in);
 	}
 
@@ -49,6 +54,9 @@ public class InstitucijosServisas {
 		Institucija ins = institucijaRepository.findOne(id);
 		ins.setId(institucijaKlientui.getId());
 		ins.setInstPavadinimas(institucijaKlientui.getInstPavadinimas());
+		ins.setKategorija(institucijaKlientui.getKategorija());
+		ins.setMiestas(institucijaKlientui.getMiestas());
+		ins.setNuotrauka(institucijaKlientui.getNuotrauka());
 		institucijaRepository.save(ins);
 	}
 
