@@ -7,7 +7,7 @@ var InstListComponent = (props) => {
         return <div>Cia kazkada bus visos institucijos, kai sulauksim ju is serverio</div>
     } else {
         var instEilutes = visosInst.map((inst) => {
-            return <InstComponent key={inst.rusis} vienaInst={inst} />
+            return <InstComponent key={inst.id} vienaInst={inst} />
         })
         return <div>{instEilutes}</div>
     }
